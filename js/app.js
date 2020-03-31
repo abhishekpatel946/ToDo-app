@@ -1,8 +1,9 @@
-// CODE EXPLAINED channel
 
 // Select the Elements
 const clear = document.querySelector(".clear");
+
 const dateElement = document.getElementById("date");
+
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
@@ -46,10 +47,12 @@ clear.addEventListener("click", function(){
 
 
 // Show todays DATE
-// const options = {weekday:"long", month:"short", day:"numeric" };
-// const today = new Date();
-
-// dateElement.innerHTML = today.toLocaleDateString("en-US",options);
+    // const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
+    const options = {weekday:"long", month:"short", day:"numeric" };
+    const today = new Date();
+    // console.log(event.toLocaleDateString('en-US', options));
+    // dateElement.innerHTML = event.toLocaleDateString('en-US', options);
+    dateElement.innerHTML = today.toLocaleDateString("en-US",options);
 
 
 // add todo function
